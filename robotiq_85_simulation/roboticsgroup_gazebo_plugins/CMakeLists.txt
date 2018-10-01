@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(roboticsgroup_gazebo_plugins)
+add_compile_options(-std=c++11)
 
 # Load catkin and all dependencies required for this package
-find_package(catkin REQUIRED COMPONENTS 
-  roscpp 
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
   gazebo_ros
   control_toolbox
 )
@@ -22,8 +23,8 @@ add_library(roboticsgroup_gazebo_disable_link_plugin src/disable_link_plugin.cpp
 target_link_libraries(roboticsgroup_gazebo_disable_link_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 catkin_package(
-  DEPENDS 
-    roscpp 
+  DEPENDS
+    roscpp
     gazebo_ros
     control_toolbox
 )
