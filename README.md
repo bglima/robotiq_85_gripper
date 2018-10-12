@@ -11,6 +11,12 @@ Start with:
 roslaunch robotiq_85_bringup robotiq_85.launch run_test:=true
 ```
 
+To see RViz description only, run:
+```
+roslaunch robotiq_85_description display.launch
+
+```
+
 If you want to run Gazebo simulation:
 ```
 roslaunch robotiq_85_gazebo robotiq_85.launch
@@ -27,11 +33,11 @@ rostopic pub /gripper/command trajectory_msgs/JointTrajectory "header:
 joint_names:
 - 'gripper_finger1_joint'
 points:
-- positions: [1.00]
+- positions: [0.80]
   velocities: [0]
   accelerations: [0]
   effort: [0]
   time_from_start: {secs: 1.00, nsecs: 0}"
 ```
 
-Position equals to 1 means fully closing the gripper. It opens with position equals to 0.
+Position equals to 0.8 means fully closing the gripper. It opens with position equals to 0.
