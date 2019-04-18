@@ -4,7 +4,7 @@
     <arg name="comport" default="/dev/ttyUSB0"/>
     <arg name="baud" default="115200"/>
     <arg name="run_test" default="true"/>
-	        
+
     <!-- Robotiq 85 ROS Driver -->
     <node pkg="robotiq_85_driver" type="robotiq_85_driver" name="robotiq_85_driver" respawn="true" output="screen">
         <param name="num_grippers" value="1"/>
@@ -17,7 +17,7 @@
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
         <param name="robot_description" value="robot_description"/>
-        <param name="publish_frequency" type="double" value="100.0" />
+        <param name="publish_frequency" type="double" value="30.0" />
     </node>
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
